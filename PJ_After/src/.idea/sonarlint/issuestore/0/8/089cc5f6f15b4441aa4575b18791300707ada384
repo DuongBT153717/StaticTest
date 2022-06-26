@@ -1,0 +1,15 @@
+
+f	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛÆÄé
+k	java:S117c"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÄÄùÿÿÿÿ
+X
+java:S1854:"=Remove this useless assignment to local variable "productId".(¹ù˜çüÿÿÿÿ
+1
+java:S36263"Remove this redundant jump.(ûÁÝ…
+I
+java:S1481:".Remove this unused "productId" local variable.(¹ù˜çüÿÿÿÿ
+X
+java:S1854p"=Remove this useless assignment to local variable "productId".(¹ù˜çüÿÿÿÿ
+1
+java:S3626i"Remove this redundant jump.(ûÁÝ…
+I
+java:S1481p".Remove this unused "productId" local variable.(¹ù˜çüÿÿÿÿ

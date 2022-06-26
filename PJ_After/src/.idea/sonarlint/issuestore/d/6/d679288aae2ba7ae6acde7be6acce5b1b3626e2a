@@ -1,0 +1,9 @@
+
+R
+java:S1854)"7Remove this useless assignment to local variable "out".(ïô†úÿÿÿÿ
+C
+java:S1481)"(Remove this unused "out" local variable.(ïô†úÿÿÿÿ
+I
+java:S1874/".Remove this use of "<init>"; it is deprecated.(ñëĞîşÿÿÿÿ
+C	java:S1080")Either remove or fill this block of code.(âÃƒŠıÿÿÿÿ
+V	java:S1257"<This block of commented-out lines of code should be removed.(„Šİşúÿÿÿÿ

@@ -1,0 +1,10 @@
+
+¢
+java:S2681["†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(•¶«Òşÿÿÿÿ
+H
+java:S1135#"2Complete the task associated to this TODO comment.(¢§‰
+Q	java:S125Y"<This block of commented-out lines of code should be removed.(îÌß
+V	java:S125f"<This block of commented-out lines of code should be removed.(ÃŸ‹îşÿÿÿÿ
+S	java:S106m"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+V
+java:S1126q"AReplace this if-then-else statement by a single return statement.(’°_
