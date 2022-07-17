@@ -14,7 +14,7 @@
         <div class="panel panel-default">
             <c:forEach items="${sessionScope.listC}" var="o">
                 <div class="panel-heading active">
-                    <h4 class="panel-title"><a href="category?cid=${o.id_cat}">${o.name_cat}</a></h4>
+                    <h4 class="panel-title"><a href="category?cid=${o.idcat}">${o.namecat}</a></h4>
                 </div>               
             </c:forEach>
         </div>
@@ -28,7 +28,7 @@
                 <div class="productinfo text-center">
                     <img src="${sessionScope.p.images}" alt="" />
                     <h2>$${sessionScope.p.price}</h2>
-                    <a href="detail?pid=${sessionScope.p.id_pro}"><h3 style="color: red;font-weight: bold">${sessionScope.p.name_pro}</h3></a>
+                    <a href="detail?pid=${sessionScope.p.idpro}"><h3 style="color: red;font-weight: bold">${sessionScope.p.namepro}</h3></a>
 
                 </div>
 

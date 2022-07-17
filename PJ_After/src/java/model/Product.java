@@ -112,5 +112,10 @@ public class Product {
         this.sellID = sellID;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" + "idpro=" + idpro + ", idcat=" + idcat + ", namepro=" + namepro + ", images=" + images + ", quantity=" + quantity + ", price=" + price + ", supplier=" + supplier + ", infor=" + infor + ", sellID=" + sellID + '}';
+    }
+
     
 }

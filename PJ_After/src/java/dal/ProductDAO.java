@@ -14,17 +14,13 @@ import java.util.logging.Level;
  */
 
 public class ProductDAO extends DBContext {
-    static final Logger LOGGER = Logger.getLogger(ProductDAO.class.getName());
-    
-    static final String IDPRO = "idpro";
-    static final String IDCAT = "idcat";
-    static final String NAMEPRO = "namepro";
+    static final Logger LOGGER = Logger.getLogger(ProductDAO.class.getName());   
     static final String IMAGE = "images";
     static final String QUANTITY = "quantity";
     static final String PRICE = "price";
     static final String SUPPLIER = "supplier";
     static final String INFOR = "infor";
-    static final String SELLID = "sell_ID";
+
     public List<Product> getAll() {
         String sql = "select * from product order by id_pro desc";
         List<Product> list = new ArrayList<>();
@@ -32,15 +28,15 @@ public class ProductDAO extends DBContext {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
-                        rs.getString(IMAGE),
-                        rs.getInt(QUANTITY),
-                        rs.getDouble(PRICE),
-                        rs.getString(SUPPLIER),
-                        rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getInt(5),
+                        rs.getDouble(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -58,15 +54,15 @@ public class ProductDAO extends DBContext {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
-                        rs.getString(IMAGE),
-                        rs.getInt(QUANTITY),
-                        rs.getDouble(PRICE),
-                        rs.getString(SUPPLIER),
-                        rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getInt(5),
+                        rs.getDouble(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getInt(9));
                 list.add(p);
             }
         } catch (SQLException e) {
@@ -84,15 +80,15 @@ public class ProductDAO extends DBContext {
             ps.setInt(2, pid);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
         } catch (SQLException e) {
@@ -105,20 +101,19 @@ public class ProductDAO extends DBContext {
     public Product getLast() {
         String sql = "select top 1 *from product\n"
                 + "order by id_pro desc";
-
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                return new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
-                        rs.getString(IMAGE),
-                        rs.getInt(QUANTITY),
-                        rs.getDouble(PRICE),
-                        rs.getString(SUPPLIER),
-                        rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                return new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getInt(5),
+                        rs.getDouble(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getInt(9));
                 
             }
 
@@ -139,15 +134,15 @@ public class ProductDAO extends DBContext {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -166,15 +161,15 @@ public class ProductDAO extends DBContext {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                return new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                return new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 
             }
 
@@ -193,15 +188,15 @@ public class ProductDAO extends DBContext {
             ps.setString(1, "%" + txtSearch + "%");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
         } catch (SQLException e) {
@@ -219,15 +214,15 @@ public class ProductDAO extends DBContext {
             ps.setDouble(2, max);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
         } catch (SQLException e) {
@@ -246,15 +241,15 @@ public class ProductDAO extends DBContext {
 
             while (rs.next()) {
                 Product p = new Product(
-                        rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                        rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
-                        rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getString(INFOR),    
+                        rs.getInt(9));
                 list.add(p);
             }
         } catch (SQLException e) {
@@ -301,15 +296,15 @@ public class ProductDAO extends DBContext {
             ps.setInt(1, (index - 1) * 6);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
-                        rs.getString(IMAGE),
-                        rs.getInt(QUANTITY),
-                        rs.getDouble(PRICE),
-                        rs.getString(SUPPLIER),
-                        rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getInt(5),
+                        rs.getDouble(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -329,15 +324,15 @@ public class ProductDAO extends DBContext {
             ps.setString(1, "%" + name + "%");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -409,15 +404,15 @@ public class ProductDAO extends DBContext {
                 ps.setInt(2, (index - 1) * 6);
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()) {
-                    list.add(new Product(rs.getInt(IDPRO),
-                            rs.getInt(IDCAT),
-                            rs.getString(NAMEPRO),
+                    list.add(new Product(rs.getInt(1),
+                            rs.getInt(2),
+                            rs.getString(3),
                             rs.getString(IMAGE),
                             rs.getInt(QUANTITY),
                             rs.getDouble(PRICE),
                             rs.getString(SUPPLIER),
                             rs.getString(INFOR),
-                            rs.getInt(SELLID)));
+                            rs.getInt(9)));
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -469,15 +464,15 @@ public class ProductDAO extends DBContext {
             ps.setDouble(2, max);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -495,15 +490,15 @@ public class ProductDAO extends DBContext {
             ps.setInt(1, (index - 1) * 6);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -521,15 +516,15 @@ public class ProductDAO extends DBContext {
             ps.setInt(1, (index - 1) * 6);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -548,15 +543,15 @@ public class ProductDAO extends DBContext {
             ps.setString(1, cid);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -639,15 +634,15 @@ public class ProductDAO extends DBContext {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -663,15 +658,15 @@ public class ProductDAO extends DBContext {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(IDPRO),
-                        rs.getInt(IDCAT),
-                        rs.getString(NAMEPRO),
+                Product p = new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
                         rs.getString(IMAGE),
                         rs.getInt(QUANTITY),
                         rs.getDouble(PRICE),
                         rs.getString(SUPPLIER),
                         rs.getString(INFOR),
-                        rs.getInt(SELLID));
+                        rs.getInt(9));
                 list.add(p);
             }
 
@@ -680,4 +675,6 @@ public class ProductDAO extends DBContext {
         }
         return list;
     }
+     
+     
 }

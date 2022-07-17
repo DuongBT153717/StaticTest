@@ -80,11 +80,11 @@
                                 <tbody>
                                     <c:forEach items="${carts}" var="C">
                                     <form action="update-quantity">
-                                        <input type="hidden" name="productId" value="${C.value.product.id_pro}"
+                                        <input type="hidden" name="productId" value="${C.value.product.idpro}"
                                                <tr>
 
                                             <td>
-                                                ${C.value.product.name_pro}
+                                                ${C.value.product.namepro}
                                             </td>
                                             <td class="cart_product">
                                                 <a href=""><img style="width: 150px;margin-right: 70px"  src="${C.value.product.images}" alt=""></a>
@@ -100,7 +100,7 @@
                                                 <p  class="cart_total_price">$<fmt:formatNumber pattern="##.#" value="${C.value.product.price*C.value.quantity}"/></p>
                                             </td>
                                             <td class="cart_delete">
-                                                <a class="cart_quantity_delete" href="delete-cart?productId=${C.value.product.id_pro}"><i class="fa fa-times"></i></a>
+                                                <a class="cart_quantity_delete" href="delete-cart?productId=${C.value.product.idpro}"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                     </form>

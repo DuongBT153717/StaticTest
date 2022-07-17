@@ -57,10 +57,10 @@
                             <c:forEach items="${carts}" var="C">
                             <form action="update-quantity">
                                 <tr>
-                                <input type="hidden" name="productId" value="${C.value.product.id_pro}"/>
-                                <th scope="row">${C.value.product.id_pro}</th>
+                                <input type="hidden" name="productId" value="${C.value.product.idpro}"/>
+                                <th scope="row">${C.value.product.idpro}</th>
                                 <td><img src="${C.value.product.images}" width="50"/></td>
-                                <td>${C.value.product.name_pro}</td>
+                                <td>${C.value.product.namepro}</td>
                                 <td>${C.value.product.price}</td>
                                 <td style="padding-left: 25px">${C.value.quantity}</td>
                                 <td style="padding-left: 23px">$<fmt:formatNumber pattern="##.#" value="${C.value.product.price*C.value.quantity}"/></td>                                
@@ -75,7 +75,7 @@
                     <h3>Information of customer</h3>
                     <form action="checkout" method="post">
                         <c:forEach items="${carts}" var="C">
-                            <input type="hidden" name="productId" value="${C.value.product.id_pro}"/>
+                            <input type="hidden" name="productId" value="${C.value.product.idpro}"/>
                         </c:forEach>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">First Name</label>

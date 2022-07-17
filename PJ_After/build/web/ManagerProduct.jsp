@@ -70,8 +70,8 @@
                                         <label for="checkbox1"></label>
                                     </span>
                                 </td>
-                                <td>${o.id_pro}</td>
-                                <td>${o.name_pro}</td>
+                                <td>${o.idpro}</td>
+                                <td>${o.namepro}</td>
                                 <td>
                                     <img src="${o.images}">
                                 </td>
@@ -80,8 +80,8 @@
                                 <td>${o.infor}</td>
                                 <td>${o.supplier}</td>
                                 <td>
-                                    <a href="loadInfor?id=${o.id_pro}"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                    <a href="#" onclick="doDelete('${o.id_pro}')" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="loadInfor?id=${o.idpro}"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#" onclick="doDelete('${o.idpro}')" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -140,9 +140,9 @@
             </div>
         </div>
         <script type="text/javascript">
-            function doDelete(id_pro) {
+            function doDelete(idpro) {
                 if (confirm("Are you sure to delete this product")) {
-                    window.location = "deleteblogmanage?id=" + id_pro;
+                    window.location = "deleteblogmanage?id=" + idpro;
                 }
             }
         </script>

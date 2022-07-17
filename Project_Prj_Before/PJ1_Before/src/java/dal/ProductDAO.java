@@ -1,4 +1,4 @@
-package dal;
+    package dal;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -148,7 +148,7 @@ public class ProductDAO extends DBContext {
 
     public Product getProductById(int id) {
         String sql = "select * from product where id_pro=?";
-
+       
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, id);

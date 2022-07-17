@@ -54,7 +54,7 @@
                             </div>
                             <div class="col-sm-7">
                                 <div class="product-information"><!--/product-information-->
-                                    <h2>${dt.name_pro}</h2>
+                                    <h2>${dt.namepro}</h2>
 
                                     <!--                                    <img src="images/product-details/rating.png" alt="" />-->
                                     <span>
@@ -72,7 +72,7 @@
                                         </c:forEach>
                                     </ul>
 
-                                    <a style="margin: 10px 0px 0px 0px" href="add-to-cart?pid=${dt.id_pro}" type="button" class="btn btn-fefault cart">
+                                    <a style="margin: 10px 0px 0px 0px" href="add-to-cart?pid=${dt.idpro}" type="button" class="btn btn-fefault cart">
                                         <i class="fa fa-shopping-cart"></i>
                                         Add to cart
                                     </a>
@@ -93,10 +93,10 @@
                                                         <div class="productinfo text-center">
                                                             <img src="${c.images}" alt="" />
                                                             <h2>$${c.price}</h2>
-                                                            <p>${c.name_pro}</p>
+                                                            <p>${c.namepro}</p>
                                                             <div class="choose">
                                                                 <ul class="nav nav-pills nav-justified">
-                                                                    <li><a href="detail?pid=${c.id_pro}&cid=${c.id_cat}"><i class="fa fa-plus-square"></i>View Detail</a></li>
+                                                                    <li><a href="detail?pid=${c.idpro}&cid=${c.idcat}"><i class="fa fa-plus-square"></i>View Detail</a></li>
                                                                 </ul>
                                                             </div>  
                                                         </div>

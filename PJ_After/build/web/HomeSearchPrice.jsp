@@ -57,21 +57,21 @@
                                                 <div class="productinfo text-center">
                                                     <img src="${p.images}" style="height: 200px" class="img-responsive" />
                                                     <h2>$${p.price}</h2>
-                                                    <p style="margin: 10px 0px">${p.name_pro}</p>
+                                                    <p style="margin: 10px 0px">${p.namepro}</p>
                                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                                 </div>
                                                 <div class="product-overlay">
                                                     <div class="overlay-content">
                                                         <h2>$${p.price}</h2>
-                                                        <p style="margin: 10px 0px">${p.name_pro}</p>
-                                                        <a href="add-to-cart?pid=${p.id_pro}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        <p style="margin: 10px 0px">${p.namepro}</p>
+                                                        <a href="add-to-cart?pid=${p.idpro}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="choose">
                                                 <ul class="nav nav-pills nav-justified">
-                                                    <li><a href="detail?pid=${p.id_pro}&cid=${p.id_cat}"><i class="fa fa-plus-square"></i>View Detail</a></li>
+                                                    <li><a href="detail?pid=${p.idpro}&cid=${p.idcat}"><i class="fa fa-plus-square"></i>View Detail</a></li>
 
                                                 </ul>
                                             </div>                         
@@ -86,14 +86,14 @@
                                                 <div class="productinfo text-center">
                                                     <img src="${p.images}" style="height: 200px" class="img-responsive" />
                                                     <h2>$${p.price}</h2>
-                                                    <p style="margin: 10px 0px">${p.name_pro}</p>
+                                                    <p style="margin: 10px 0px">${p.namepro}</p>
                                                     <button style="margin-bottom: 24px;" type="button" class="btn btn-danger">Out of stock</button>
                                                 </div>                                       
                                             </div>
 
                                             <div class="choose">
                                                 <ul class="nav nav-pills nav-justified">
-                                                    <li><a href="detail?pid=${p.id_pro}"><i class="fa fa-plus-square"></i>View Detail</a></li>
+                                                    <li><a href="detail?pid=${p.idpro}"><i class="fa fa-plus-square"></i>View Detail</a></li>
 
                                                 </ul>
                                             </div>                         

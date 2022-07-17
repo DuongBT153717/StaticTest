@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Category;
+import model.Product;
 
 /**
  *
@@ -22,8 +23,8 @@ public class CategoryDAO extends DBContext {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Category c = new Category(rs.getInt("id_cat"),
-                        rs.getString("name_cat"),
+                Category c = new Category(rs.getInt(1),
+                        rs.getString(2),
                         rs.getString("describe"));
                 list.add(c);
             }
@@ -32,5 +33,5 @@ public class CategoryDAO extends DBContext {
         }
         return list;
     }
- 
+
 }

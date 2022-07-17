@@ -204,7 +204,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="">${o.p.name_pro}</td>
+                                        <td class="">${o.p.namepro}</td>
                                         <td class="invert">$${o.o.totalMoney}</td>
                                         <td hidden="" class="invert">${o.o.uid}</td>
                                         <td class="invert">${o.o.date}</td>
